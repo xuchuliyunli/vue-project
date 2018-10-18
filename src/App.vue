@@ -1,7 +1,10 @@
 <template>
-  <div id="app-container">
+  <div id="app">
     <!-- 顶部 Header 区域 -->
     <mt-header fixed title="黑马程序员-Vue项目"></mt-header>
+
+    <!-- 中间部分 -->
+    <router-view></router-view>
 
     <!-- 底部 Tabbar 区域 -->
     <nav class="mui-bar mui-bar-tab">
@@ -34,17 +37,8 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-.app-container {
   padding-top: 40px;
   overflow-x: hidden;
 }

@@ -6,19 +6,17 @@ import Vue from 'vue'
 // 导入App根组件
 import App from './App'
 
-//导入路由的包
-import VueRouter from 'vue-router'
-Vue.use(VueRouter)
-
 // 导入路由模块
 import router from './router'
 
-// 按需导入 Mint-UI 中的组件
-import { Header } from 'mint-ui'
-
 // 导入Mint-ui样式组件
 import 'mint-ui/lib/style.min.css'
+
+// 按需导入 Mint-UI 中的组件
+import { Header, Swipe, SwipeItem} from 'mint-ui'
 Vue.component(Header.name, Header)
+Vue.component(Swipe.name, Swipe);
+Vue.component(SwipeItem.name, SwipeItem);
 
 // 导入Mui样式组件
 import './assets/mui/css/mui.min.css'
