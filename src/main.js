@@ -1,12 +1,23 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+//入口文件
 import Vue from 'vue'
+
+// 导入App根组件
 import App from './App'
+
+// 导入路由模块
 import router from './router'
 
-import MintUi from 'mint-ui'
-import 'mint-ui/lib/style.css'
-Vue.use(MintUi)
+// 按需导入 Mint-UI 中的组件
+import { Header } from 'mint-ui'
+
+// 导入Mint-ui样式组件
+import 'mint-ui/lib/style.min.css'
+Vue.component(Header.name, Header)
+
+// 导入Mui样式组件
+import './assets/mui/css/mui.min.css'
 
 Vue.config.productionTip = false
 
@@ -15,5 +26,5 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
 })
