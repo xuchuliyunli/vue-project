@@ -24,6 +24,10 @@ import './assets/mui/css/mui.min.css'
 // 导入扩展图标样式
 import './assets/mui/css/icons-extra.css'
 
+//导入vue-resource组件
+import VueResource from  'vue-resource'
+Vue.use(VueResource)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
