@@ -6,6 +6,10 @@ import Vue from 'vue'
 // 导入App根组件
 import App from './App'
 
+//导入路由的包
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+
 // 导入路由模块
 import router from './router'
 
@@ -18,6 +22,9 @@ Vue.component(Header.name, Header)
 
 // 导入Mui样式组件
 import './assets/mui/css/mui.min.css'
+
+// 导入扩展图标样式
+import './assets/mui/css/icons-extra.css'
 
 Vue.config.productionTip = false
 
