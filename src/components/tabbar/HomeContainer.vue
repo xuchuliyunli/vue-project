@@ -44,7 +44,7 @@
     },
     methods: {
       getlunbo() {
-        this.$http.get("http://027xin.com:8899/api/getlunbo").then(result => {
+        this.$http.get("api/getlunbo").then(result => {
           if(result.body.status === 0) {
             this.imageList = result.body.message;
           }else {
