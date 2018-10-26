@@ -37,6 +37,10 @@ Vue.filter('dateFormat', function (dataStr, pattern = 'YYYY-MM-DD HH:mm:ss' ) {
   return moment(dataStr).format(pattern)
 })
 
+//导入Vue-preview组件
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
+
 //全局配置请求的URL根域名
 Vue.http.options.root = "http://027xin.com:8899"
 
