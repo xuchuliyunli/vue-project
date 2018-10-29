@@ -8,7 +8,11 @@
     </transition>  
 
     <!-- 顶部 Header 区域 -->
-    <mt-header fixed title="黑马程序员-Vue项目"></mt-header>
+    <mt-header fixed title="黑马程序员-Vue项目">
+      <span slot="left" @click="goBack" v-show="flag">
+        <mt-button icon="back">返回</mt-button>
+      </span>
+    </mt-header>
     
     <!-- 底部 Tabbar 区域 -->
     <nav class="mui-bar mui-bar-tab">
@@ -22,7 +26,7 @@
 			</router-link>
 			<router-link class="mui-tab-item-llb" to="/shopcar">
 				<span class="mui-icon mui-icon-extra mui-icon-extra-cart">
-					<span class="mui-badge" id="badge">0</span>
+					<span class="mui-badge" id="badge">{{ this.$store.getters.getAllCount }}</span>
 				</span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
@@ -37,7 +41,29 @@
 
 <script>
 export default {
-  name: "App"
+  name: "App",
+    data() {
+    return {
+      flag:false
+    }
+  },
+  created () {
+    this.flag = this.$route.path === '/home'? false : true
+  },
+  methods: {
+    goBack() {
+      this.$router.go(-1);
+    }
+  },
+  watch: {
+    '$route.path': function(newVal){
+      if(newVal === '/home') {
+        this.flag = false
+      }else {
+        this.flag = true
+      }
+    }
+  }
 };
 </script>
 

@@ -11,7 +11,6 @@ import mui from '../../assets/mui/js/mui.min.js'
 export default {
   mounted () {
     mui(".mui-numbox").numbox();
-    console.log(this.max);
   },
 
   methods: {
